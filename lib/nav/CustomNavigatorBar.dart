@@ -17,18 +17,23 @@ class CustomNavigationBar extends State {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       selectedFontSize: 0,
-      iconSize: 30,
+      iconSize: 25,
+      backgroundColor: Colors.white,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home, color: Colors.black45),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.add_box),
+          icon: Icon(Icons.add_box, color: Colors.black45),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.book),
+          icon: Icon(Icons.book, color: Colors.black45),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.menu, color: Colors.black45),
           label: '',
         ),
       ],
