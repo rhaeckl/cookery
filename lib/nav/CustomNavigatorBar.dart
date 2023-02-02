@@ -1,9 +1,9 @@
-import 'package:cookery/main.dart';
+import 'package:cookery/screen/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavigationBar extends State {
   int _selectedIndex = 0;
-  State<MyHomePage> state;
+  State<HomeScreen> state;
 
   CustomNavigationBar(this.state);
 
