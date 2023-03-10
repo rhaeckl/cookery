@@ -1,4 +1,6 @@
+import 'package:cookery/screen/DianasScreen.dart';
 import 'package:cookery/screen/HomeScreen.dart';
+import 'package:cookery/screen/HomeScreen2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const HomeScreen(title: 'Flutter Demo Home Page'),
+      // home: const HomeScreen2(title: 'Willkommen bei Cookery'),
+      home: const DianasScreen(title: 'Dianas Screen')
     );
   }
 }
