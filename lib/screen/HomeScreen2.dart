@@ -1,3 +1,4 @@
+import 'package:cookery/screen/AddRecipeScreen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen2 extends StatefulWidget {
@@ -23,76 +24,83 @@ class _HomeScreenState extends State<HomeScreen2> {
       ),
       body: Center(
           child: Card(
-            elevation: 50,
-            shadowColor: Colors.black,
-            color: Colors.tealAccent[0],
-            child: SizedBox(
-              width: 300,
-              height: 500,
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  children: [
-                    const CircleAvatar(
-                      backgroundColor: Color(0xff4db7aa),
-                      radius: 108,
-                      child: CircleAvatar(
-                        // backgroundImage: NetworkImage(
-                        //     "https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png"), //NetworkImage
-                        backgroundImage: ExactAssetImage('assets/icons/logo.png'),
-                        // backgroundImage: Image.asset("assets/icons/logo.png"),
-                        radius: 100,
-                      ), //CircleAvatar
-                    ), //CircleAvatar
-                    const SizedBox(
-                      height: 10,
-                    ), //SizedBox
-                    const Text(
-                      'Cookery',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                      ), //Textstyle
-                    ), //Text
-                    const SizedBox(
-                      height: 10,
-                    ), //SizedBox
-                    const Text(
-                      'Hier steht irgendein Text der was zur App eingangs erklärt oder den Benutzer willkommen heißt. Dafür wird die Didi sich bestimmt was einfallen lassen :-)',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                      ), //Textstyle
-                    ), //Text
-                    const SizedBox(
-                      height: 10,
-                    ), //SizedBox
-                    SizedBox(
-                      width: 200,
-
-                      child: ElevatedButton(
-                        onPressed: () => 'Null',
-                        style: ButtonStyle(
-                            backgroundColor:
+        elevation: 50,
+        shadowColor: Colors.black,
+        color: Colors.white,
+        child: SizedBox(
+          width: 300,
+          height: 500,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                const CircleAvatar(
+                  backgroundColor: Color(0xff4db7aa),
+                  radius: 108,
+                  child: CircleAvatar(
+                    // backgroundImage: NetworkImage(
+                    //     "https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png"), //NetworkImage
+                    backgroundImage: ExactAssetImage('assets/icons/logo.png'),
+                    // backgroundImage: Image.asset("assets/icons/logo.png"),
+                    radius: 100,
+                  ), //CircleAvatar
+                ), //CircleAvatar
+                const SizedBox(
+                  height: 10,
+                ), //SizedBox
+                const Text(
+                  'Cookery',
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                  ), //Textstyle
+                ), //Text
+                const SizedBox(
+                  height: 10,
+                ), //SizedBox
+                const Text(
+                  'Hier steht irgendein Text der was zur App eingangs erklärt oder den Benutzer willkommen heißt. Dafür wird die Didi sich bestimmt was einfallen lassen :-)',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black,
+                  ), //Textstyle
+                ), //Text
+                const SizedBox(
+                  height: 10,
+                ), //SizedBox
+                SizedBox(
+                  width: 200,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AddRecipeScreen()),
+                      );
+                    },
+                    style: ButtonStyle(
+                        backgroundColor:
                             MaterialStateProperty.all(const Color(0xff4db7aa))),
-                        child: Padding(
-                          padding: const EdgeInsets.all(4),
-                          child: Row(
-                            children: const [
-                              Icon(Icons.touch_app),
-                              Text('Rezept hinzufügen')
-                            ],
-                          ),
-                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: Row(
+                        children: const [
+                          Icon(Icons.touch_app, color: Colors.white),
+                          Text(
+                            'Rezept hinzufügen',
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
                       ),
-                    ) //SizedBox
-                  ],
-                ), //Column
-              ), //Padding
-            ), //SizedBox
-          )
-      ),
+                    ),
+                  ),
+                ) //SizedBox
+              ],
+            ), //Column
+          ), //Padding
+        ), //SizedBox
+      )),
     );
   }
 }
